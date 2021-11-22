@@ -4,9 +4,13 @@
 - Disablen indien 1 op dobbelsteen
 */
 
-export default function Dice({eye}){
+export default function Dice({
+  eye, onRoll, }){
   return(
-    <button className="snakeEyes">
+    <button 
+    onClick={onRoll}
+    className="snakeEye"
+    disabled = {eye === 1}>
       {eye}
     </button>
   )
